@@ -1,0 +1,86 @@
+
+
+
+<html> 
+	
+	<head>
+
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<script src="index.js"></script>
+		
+
+	</head>
+	<body> 
+		
+		<form method="GET" onsubmit="enviado()"> 
+			<h1>Create Account</h1><br /> 
+
+
+			<label for="Nombre">
+				<span class="label">Nombre</span><br />
+   				<input type="text" id="Nombre" pattern="[^0-9]*" value=""  onchange="showerror()" required/>
+				<div class="vacio">Rellene este campo</div>
+     				<div class="error">Nombre no válido</div>
+				<div class="bien"><br /></div>
+  			</label>
+			<br /><br /> 
+
+			<label for="email">
+				<span class="label">Email</span><br />
+   				<input type="email"  id="email" pattern="^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$" value="" required/> 
+				<div class="vacio">Rellene este campo</div>   				
+    				<div class="error">Email no válido</div>
+				<div class="bien"><br /></div>
+  			</label>
+			<br /><br /> 
+
+			<label for="Clave">
+				<span class="label">Clave</span><br />
+   				<input type="password" id="Clave" value="" minlength ="8" required/>  
+				<div class="vacio">Rellene este campo</div>  				
+    				<div class="error">Contraseña no válida</div>
+				<div class="bien"><br /></div>
+  			</label>
+			<br /><br />
+
+			<label for="confirmation">
+				<span class="label">Confirme su clave</span><br />
+   				<input type="password" id="confirmation" value="" minlength ="8" onblur="contraseña()" required/>  
+				<div class="vacio">Rellene este campo</div>  				
+    				<div class="error">Contraseña no válida</div>
+				<div class="bien"><br /></div>
+  			</label>
+			<br /><br />
+
+			<input id="enviar" type="submit" value="ENVIAR" onClick="contraseña()"/>
+			<br /><br /><br />
+
+
+
+
+
+			
+		</form> 
+		
+<script type="text/javascript">
+
+	function enviado(){alert('Su formulario ha sido enviado');}
+
+		
+
+		function contraseña(){
+					let confirmation = document.getElementById("confirmation").value
+					let clave = document.getElementById("Clave").value
+					
+					if(confirmation==clave)	
+					{submit()}
+					else{alert('Las contraseñas no coinciden');event.preventDefault()}}
+						
+
+	
+		function enviado(){alert('Su formulario ha sido enviado');}
+
+</script>
+		
+	</body> 
+</html>  

@@ -1,0 +1,74 @@
+<style type="text/css">
+	
+	
+			body{background:rgb(36,41,51); display:flex; justify-content:center; align-content:center; align-items:center}
+
+			h1, label{font-family: 'Figtree', sans-serif; text-align:left; color:rgb(161,174,211)}
+			h1{font-weight:bold;; Font-size:25pt; }
+			label{Font-size:15pt}			
+			form{background-color:rgb(47,54,68);				
+				width:25%;				
+				margin: 1.5rem;
+				justify-content:center; align-content:center;
+				border-color:rgb(161,174,211);
+				border-width:2px; 
+				border-style:solid; 
+				}
+			form,input{border-radius:5px}
+			input,label,h1{
+				width:90%;
+				margin-left: 1.5rem;
+				margin-right: 1.5rem;
+				}
+			input{height:35px}
+			input[type="submit"]{background-color:rgb(108,99,255); 
+				color:rgb(255, 255, 255);
+				border-color:rgb(0, 0, 0);
+				height:45px}
+							
+			body{background:	rgb(36,41,51); display:flex; justify-content:center; align-content:center;align-items:center}
+			input:invalid{border-color: rgb(219,90,90); border-width:2px; border-style:solid; 
+						background-image:url("error-icon.svg"); background-position:98%; background-repeat:no-repeat }
+			input:valid:required{border-color:rgb(78,202,100);border-width:2px; border-style:solid; 
+						background:url("success-icon.svg");background-color:white; background-position:98%; background-repeat:no-repeat; background-attachment: fixed}					
+			
+			.vacio{
+  			display: block;
+			margin-left:1.5rem;
+			width: 180px; 
+			font-size: 12px; 
+  			line-height: 1.5;
+  			color: red; 
+						}
+			:invalid ~.vacio{display:none}
+			
+			:valid ~.vacio {display:none}
+					
+
+			.error{display:none;}
+			
+			:invalid ~.error {
+  			display: block;
+			margin-left:1.5rem;
+			width: 180px; 
+			font-size: 12px; 
+  			line-height: 1.5;
+  			color: red; 
+						}
+
+			:blank ~.error {
+  			display: none;}
+			
+			.bien{display:none;}
+
+			:valid ~ .bien {
+  			display: block;
+			margin-left:1.5rem;
+			width: 180px; 
+			font-size: 12px; 
+  			line-height: 1.5;
+  						}
+			
+
+			
+</style>
